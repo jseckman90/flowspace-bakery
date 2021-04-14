@@ -12,5 +12,9 @@
       %li
         = pluralize(cookies.count, "Cookie")
         with
-        = fillings || "no filling"
+        -# check if string is blank, if yes, display "no fillings". If no, display what the filling the user typed
+        - if fillings.blank?
+          = "no fillings"
+        - else 
+          = fillings
     
