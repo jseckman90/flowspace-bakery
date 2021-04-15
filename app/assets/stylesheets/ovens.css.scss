@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//  Media query to set the order of prepare-btn and cookie-info divs when screen width shrinks to 768px or lower
 @media screen and (max-width: 768px) {
   .container {
     display: flex;

@@ -1,4 +1,6 @@
 %h3= @oven.name
+
+-# created a container div to house children cookie-info and prepare-btn divs. 
 .container
   .cookie-info
     Cookie in oven:
@@ -19,7 +21,7 @@
       None
 
   %br
-  
+
   .prepare-btn
     = link_to "Prepare Cookie", new_oven_cookies_path(@oven), class: 'button mobile-btn'  
 
