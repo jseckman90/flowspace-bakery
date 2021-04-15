@@ -22,11 +22,11 @@ The following bugs fixes or features need to be completed:
    Then I should see that the cookies are ready
    Note: Periodic polling is acceptable, but only the relevant part of the page should update
 
-Steps 2 and 3 can be on the same branch:
+   Steps 2 and 3 can be on the same branch:
 
-- Need some action to happen before ready returns true
-- Create a baker function that implements some sort of timer and while the timer is running, display that the cookies are baking on the oven page.
-- In ready before returning true, run baker function as a callback function, once baker function has run, then ready function will return true and oven will display the cookies are ready and can be retrieved
+   - Need some action to happen before ready returns true
+   - Create a baker function that implements some sort of timer and while the timer is running, display that the cookies are baking on the oven page.
+   - In ready before returning true, run baker function as a callback function, once baker function has run, then ready function will return true and oven will display the cookies are ready and can be retrieved
 
 4. Feature: As a bakery owner, I should be able to place a sheet with multiple cookies into an oven
    Given I have an oven
