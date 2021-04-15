@@ -1,23 +1,28 @@
 %h3= @oven.name
-
-.cookie-info
-  Cookie in oven:
-  - if @oven.cookie
-    1 cookie with 
+.container
+  .cookie-info
+    Cookie in oven:
+    - if @oven.cookie
+      1 cookie with 
     
-    -# check if string is blank, if yes, display "no fillings". If no, display what the filling the user typed
-    - if @oven.cookie.fillings.blank?
-      = "no fillings"
-    - else
-      = @oven.cookie.fillings
+      -# check if string is blank, if yes, display "no fillings". If no, display what the filling the user typed
+      - if @oven.cookie.fillings.blank?
+        = "no fillings"
+      - else
+        = @oven.cookie.fillings
     
       
-    - if @oven.cookie.ready?
-      (Your Cookie is Ready)
-      = button_to "Retrieve Cookie", empty_oven_path, class: 'button tiny'
-  - else
-    None
+      - if @oven.cookie.ready?
+        (Your Cookie is Ready)
+        = button_to "Retrieve Cookie", empty_oven_path, class: 'button tiny'
+    - else
+      None
 
-%br
+  %br
+  
+  .prepare-btn
+    = link_to "Prepare Cookie", new_oven_cookies_path(@oven), class: 'button mobile-btn'  
 
-= link_to "Prepare Cookie", new_oven_cookies_path(@oven), class: 'button'
+
+
+
